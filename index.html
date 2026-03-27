@@ -393,6 +393,38 @@
       }
     }
     .article-block i { font-style: italic; }
+    .article-list {
+      list-style: none;
+      padding: 0;
+      margin: 16px 0;
+    }
+    .article-list li {
+      color: var(--color-gray-500);
+      font-size: 15px;
+      letter-spacing: -0.3px;
+      line-height: 138%;
+      padding: 6px 0 6px 20px;
+      position: relative;
+    }
+    @media (min-width: 1024px) {
+      .article-list li {
+        font-size: 18px;
+        letter-spacing: -0.36px;
+      }
+    }
+    .article-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 14px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--color-gray-250);
+    }
+    @media (min-width: 1024px) {
+      .article-list li::before { top: 16px; }
+    }
     .article-block figure {
       display: flex;
       align-items: center;
@@ -929,7 +961,14 @@
 
               <p>So companies hired someone to look at the whole picture. The CX team. <strong>Their job: stitch the customer's experience back together after the org chart tore it apart.</strong></p>
 
-              <p>And then came the tools. Ticketing to route you from one department to the next. Surveys to ask how you felt about each handoff. Journey maps to visualize the path you took through the company's internal structure. Escalation workflows to decide whose problem you were. Voice-of-customer programs to reassemble what the org chart broke apart.</p>
+              <p>And then came the tools.</p>
+              <ul class="article-list">
+                <li>Ticketing to route you from one department to the next.</li>
+                <li>Surveys to ask how you felt about each handoff.</li>
+                <li>Journey maps to visualize the path you took through the company's internal structure.</li>
+                <li>Escalation workflows to decide whose problem you were.</li>
+                <li>Voice-of-customer programs to reassemble what the org chart broke apart.</li>
+              </ul>
 
               <div class="big-number">
                 <div class="big-number__value">$22B</div>
